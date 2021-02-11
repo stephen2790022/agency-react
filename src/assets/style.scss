@@ -16,11 +16,13 @@
 //*******Theme*************//
 .light {
   background-color: #fff;
+  transition: 1s;
 }
 
 .dark {
   background-color: black;
   color: #fff;
+  transition: 1s;
 
   a {
     color: #fff;

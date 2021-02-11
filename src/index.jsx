@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <ThemContext.Provider value={{them, setThem}} >
+        <ThemContext.Provider value={{ them, setThem }} >
           <NavBar />
           <main className="bodyPage">
             <Switch>
@@ -25,7 +25,7 @@ const App = () => {
               <Route path='/about'>
                 <About />
               </Route>
-              <Route path='/works' exact>
+              <Route path='/works'>
                 <Works />
               </Route>
             </Switch>

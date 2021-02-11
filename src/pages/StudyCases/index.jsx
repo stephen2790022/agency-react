@@ -14,7 +14,7 @@ const StudyCases = () => {
   return (
     <div>
       {!currentCase && <h2>Pas de case</h2>}
-      {currentCase && (<h2>{currentCase.description}</h2>)}
+      {currentCase && <h2>{currentCase.description}</h2>}
     </div>
   );
 };

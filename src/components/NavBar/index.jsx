@@ -5,6 +5,18 @@ import { ThemContext } from 'ThemContext'
 
 const NavBar = ( ) => {
   const { them, setThem } = useContext(ThemContext);
+
+  const handleChange = () => {
+    if (them === "light" ) {
+      setThem("dark")
+      
+    } else {
+      setThem("light")
+    }
+  }
+
+
+
   
   useEffect(() => {
     if (them === "light") {
@@ -17,6 +29,8 @@ const NavBar = ( ) => {
       document.body.classList.add(localStorage.themChoice)
     }
   })
+
+  console.log(localStorage.themChoice)
   return (
     <nav className="navBar">
       <ul>
@@ -24,7 +38,7 @@ const NavBar = ( ) => {
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/works'>Works</Link></li>
         <li>
-          {them === "light" && <button onClick={() => them === "light" ? setThem("dark") : setThem("light")}>Push to Dark</button>}
+          {them === "light" && <button onClick={handleChange}>Push to Dark</button>}
           {them === "dark" && <button onClick={() => them === "light" ? setThem("dark") : setThem("light")}>Push to Light</button>}
         </li>
       </ul>
