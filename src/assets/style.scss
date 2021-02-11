@@ -39,19 +39,8 @@
   align-items: center;
 
   .toggle {
-    position: absolute;
     cursor: pointer;
-    top: 20px;
-    right: 25px;
     font-size: 150%;
-  }
-
-  .toggle:before {
-    content: '☀️';
-  }
-
-  .toggle.active:before {
-    content: '🌒';
   }
 
   .toggle.animate {
